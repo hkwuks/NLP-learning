@@ -59,7 +59,7 @@ One-hot表示方法的例子如下：
 
 在这里共包括11个字，因此每个字可以转换为一个11维度稀疏向量：
 
-```
+```python
 我：[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 爱：[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ...
@@ -87,7 +87,7 @@ Bag of Words（词袋表示），也称为Count Vectors，每个文档的字/词
 
 在sklearn中可以直接`CountVectorizer`来实现这一步骤：
 
-```
+```python
 from sklearn.feature_extraction.text import CountVectorizer
 corpus = [
     'This is the first document.',
@@ -114,7 +114,7 @@ N-gram与Count Vectors类似，不过加入了相邻单词组合成为新的单�
 
 TF-IDF 分数由两部分组成：第一部分是**词语频率**（Term Frequency），第二部分是**逆文档频率**（Inverse Document Frequency）。其中计算语料库中文档总数除以含有该词语的文档数量，然后再取对数就是逆文档频率。
 
-```
+```python
 TF(t)= 该词语在当前文档出现的次数 / 当前文档中词语的总数
 IDF(t)= log_e（文档总数 / 出现该词语的文档总数）
 ```
@@ -147,7 +147,7 @@ print(f1_score(train_df['label'].values[10000:], val_pred, average='macro'))
 
 ####  TF-IDF +  RidgeClassifier
 
-```
+```python
 import pandas as pd
 
 from sklearn.feature_extraction.text import TfidfVectorizer
