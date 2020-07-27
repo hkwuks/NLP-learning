@@ -27,8 +27,7 @@ train_df = pd.read_csv('../input/train_set.csv', sep='\t', nrows=100)
 - 分隔符`sep`，为每列分割的字符，设置为`\t`即可；
 - 读取行数`nrows`，为此次读取文件的函数，是数值类型（由于数据集比较大，建议先设置为100）；
 
-
-![task2_train_head](https://img-blog.csdnimg.cn/20200714203730739.png)
+<img src="Task2 数据读取与数据分析.assets/20200714203730739.png" alt="task2_train_head" style="zoom:100%;" />
 
 上图是读取好的数据，是表格的形式。第一列为新闻的类别，第二列为新闻的字符。
 
@@ -81,7 +80,7 @@ plt.xlabel('Text char count')
 plt.title("Histogram of char count")
 ```
 
-![task2_char_hist](https://img-blog.csdnimg.cn/20200714203836905.png)
+<img src="Task2 数据读取与数据分析.assets/20200714203836905.png" alt="task2_char_hist" style="zoom:100%;" />
 
 #### 新闻类别分布
 
@@ -93,7 +92,7 @@ plt.title('News class count')
 plt.xlabel("category")
 ```
 
-![task2_class_hist](https://img-blog.csdnimg.cn/20200714203929296.png)
+<img src="Task2 数据读取与数据分析.assets/20200714203929296.png" alt="task2_class_hist" style="zoom:100%;" />
 
 在数据集中标签的对应的关系如下：{'科技': 0, '股票': 1, '体育': 2, '娱乐': 3, '时政': 4, '社会': 5, '教育': 6, '财经': 7, '家居': 8, '游戏': 9, '房产': 10, '时尚': 11, '彩票': 12, '星座': 13}
 

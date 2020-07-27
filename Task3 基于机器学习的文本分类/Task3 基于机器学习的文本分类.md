@@ -27,7 +27,7 @@
 
 
 
-![machine_learning_overview](https://img-blog.csdnimg.cn/20200714203223253.jpg)
+<img src="Task3 基于机器学习的文本分类.assets/20200714203223253.jpg" alt="machine_learning_overview" style="zoom:100%;" />
 
  
 

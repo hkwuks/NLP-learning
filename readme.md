@@ -18,6 +18,7 @@
 train_df = pd.read_csv('../input/train_set.csv', sep='\t')
 ```
 ## 二、评测标准
+
 评价标准为类别f1_score的均值，选手提交结果与实际测试集的类别进行对比，结果越大越好。
 
 计算公式：$F1 = 2 * \frac{(precision * recall) }{(precision + recall)} $​	

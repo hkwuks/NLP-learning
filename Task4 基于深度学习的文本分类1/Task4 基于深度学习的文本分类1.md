@@ -32,20 +32,19 @@ FastText是一种典型的深度学习词向量的表示方法，它非常简单
 
 所以FastText是一个三层的神经网络，输入层、隐含层和输出层。
 
-
-![fast_text](https://img-blog.csdnimg.cn/20200714204856589.png)
+<img src="Task4 基于深度学习的文本分类1.assets/20200714204856589.png" alt="fast_text" style="zoom:100%;" />
 
 
 下图是使用keras实现的FastText网络结构：
 
-![keras_fasttext](https://img-blog.csdnimg.cn/20200714204249463.jpg)
+<img src="Task4 基于深度学习的文本分类1.assets/20200714204249463.jpg" alt="keras_fasttext" style="zoom:100%;" />
 
 FastText在文本分类任务上，是优于TF-IDF的：
 
 - FastText用单词的Embedding叠加获得的文档向量，将相似的句子分为一类
 - FastText学习到的Embedding空间维度比较低，可以快速进行训练
 
-如果想深度学习，可以参考论文：
+如果想学习深度学习，可以参考论文：
 
 Bag of Tricks for Efficient Text Classification, https://arxiv.org/abs/1607.01759
 
@@ -101,11 +100,11 @@ print(f1_score(train_df['label'].values[-5000:].astype(str), val_pred, average='
 
 
 
-![train_val](https://img-blog.csdnimg.cn/20200714204403844.png)
+<img src="Task4 基于深度学习的文本分类1.assets/20200714204403844.png" alt="train_val" style="zoom:100%;" />
 
 这里我们使用10折交叉验证，每折使用9/10的数据进行训练，剩余1/10作为验证集检验模型的效果。这里需要注意每折的划分必须保证标签的分布与整个数据集的分布一致。
 
-```
+```python
 label2id = {}
 for i in range(total):
     label = str(all_labels[i])
